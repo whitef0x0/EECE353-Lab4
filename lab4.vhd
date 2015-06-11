@@ -68,8 +68,8 @@ architecture rtl of lab4 is
   signal xdone, ydone, ldone : std_logic;
   signal incr_y, incr_x, drawl : std_logic;
 
-  signal xmid      : std_logic_vector(7 downto 0);
-  signal ymid      : std_logic_vector(6 downto 0);
+  signal x_int      : std_logic_vector(7 downto 0);
+  signal y_int      : std_logic_vector(6 downto 0);
 
 
 begin
@@ -109,8 +109,8 @@ begin
 		initl		=> initl,
 		drawl		=> drawl,
 		colour		=> colour,
-		x		=> xmid,
-		y		=> ymid,
+		x		=> x_int,
+		y		=> y_int,
 		ledg		=> LEDG
 	);
 		
@@ -123,8 +123,8 @@ begin
 		drawl		=> drawl,
 		x		=> s_x,
 		y		=> s_y,
-		xin		=> xmid,
-		yin		=> ymid,
+		xin		=> x_int,
+		yin		=> y_int,
 		xdone		=> xdone,
 		ydone		=> ydone,
 		ldone		=> ldone,
