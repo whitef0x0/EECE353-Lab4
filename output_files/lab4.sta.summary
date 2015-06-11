@@ -1,0 +1,109 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : -8.206
+TNS   : -346.641
+
+Type  : Slow Model Setup 'fsm_challenge:fsm_challenge0|curr_state.LOAD_X'
+Slack : -3.539
+TNS   : -3.539
+
+Type  : Slow Model Setup 'fsm_challenge:fsm_challenge0|curr_state.INIT_LINE'
+Slack : 1.678
+TNS   : 0.000
+
+Type  : Slow Model Setup 'vga_u0|mypll|altpll_component|pll|clk[0]'
+Slack : 32.534
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : -2.417
+TNS   : -114.856
+
+Type  : Slow Model Hold 'fsm_challenge:fsm_challenge0|curr_state.INIT_LINE'
+Slack : -2.307
+TNS   : -6.452
+
+Type  : Slow Model Hold 'vga_u0|mypll|altpll_component|pll|clk[0]'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'fsm_challenge:fsm_challenge0|curr_state.LOAD_X'
+Slack : 2.524
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'KEY[0]'
+Slack : -1.222
+TNS   : -1.222
+
+Type  : Slow Model Minimum Pulse Width 'fsm_challenge:fsm_challenge0|curr_state.INIT_LINE'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'fsm_challenge:fsm_challenge0|curr_state.LOAD_X'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : 7.620
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'vga_u0|mypll|altpll_component|pll|clk[0]'
+Slack : 17.873
+TNS   : 0.000
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : -3.146
+TNS   : -116.497
+
+Type  : Fast Model Setup 'fsm_challenge:fsm_challenge0|curr_state.LOAD_X'
+Slack : -1.624
+TNS   : -1.624
+
+Type  : Fast Model Setup 'fsm_challenge:fsm_challenge0|curr_state.INIT_LINE'
+Slack : 1.387
+TNS   : 0.000
+
+Type  : Fast Model Setup 'vga_u0|mypll|altpll_component|pll|clk[0]'
+Slack : 36.612
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : -1.401
+TNS   : -100.793
+
+Type  : Fast Model Hold 'fsm_challenge:fsm_challenge0|curr_state.INIT_LINE'
+Slack : -1.362
+TNS   : -3.867
+
+Type  : Fast Model Hold 'vga_u0|mypll|altpll_component|pll|clk[0]'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'fsm_challenge:fsm_challenge0|curr_state.LOAD_X'
+Slack : 1.920
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'KEY[0]'
+Slack : -1.222
+TNS   : -1.222
+
+Type  : Fast Model Minimum Pulse Width 'fsm_challenge:fsm_challenge0|curr_state.INIT_LINE'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'fsm_challenge:fsm_challenge0|curr_state.LOAD_X'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : 7.620
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'vga_u0|mypll|altpll_component|pll|clk[0]'
+Slack : 17.873
+TNS   : 0.000
+
+------------------------------------------------------------
