@@ -18,7 +18,7 @@ ENTITY datapath_challenge IS
 		ledr: OUT STD_LOGIC_VECTOR(17 downto 0);
 		xdone, ydone, ldone : OUT STD_LOGIC
 	);
-END datapath_challenge;
+END entity;
 
 ARCHITECTURE mixed OF datapath_challenge IS
   SIGNAL x_old : unsigned(7 downto 0);
@@ -58,7 +58,7 @@ BEGIN
 				ELSE
 				  x0 := x_old;
 				  y0 := y_old;
-				  LEDR(17 downto 11) <= y_old;
+				  LEDR(17 downto 11) <= std_logic_vector(y_old);
 				  
 				END IF;
 				
@@ -66,7 +66,7 @@ BEGIN
 				x_old <= x1;
 				y1 := unsigned(yin); -- destination point
 				y_old <= y1;
-				LEDR(9 downto 3) <= y1;
+				LEDR(9 downto 3) <= std_logic_vector(y1);
 				
 				dx := to_signed(abs(to_integer(x1) - to_integer(x0)), 9);
 				dy := to_signed(abs(to_integer(y1) - to_integer(y0)), 8);

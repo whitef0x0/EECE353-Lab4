@@ -6,6 +6,7 @@ LIBRARY WORK;
 USE WORK.ALL;
 
 ENTITY fsm_challenge IS
+
 	PORT (
 		clock : IN STD_LOGIC;
 		resetb : IN STD_LOGIC;
@@ -17,12 +18,12 @@ ENTITY fsm_challenge IS
 		x : OUT STD_LOGIC_VECTOR(7 downto 0);
 		y : OUT STD_LOGIC_VECTOR(6 downto 0);
 		ledg : OUT STD_LOGIC_VECTOR(7 downto 0);
-
 		initLoad : OUT STD_LOGIC
 	);
 END fsm_challenge;
 
 ARCHITECTURE behavioural OF fsm_challenge IS
+
   TYPE state_types is (START, LOAD_Y, LOAD_X, LOAD_DONE, INIT_LINE, DRAW_LINE, DONE_LINE);
   SIGNAL curr_state, next_state : state_types := START;
   
@@ -61,6 +62,7 @@ BEGIN
 				colour <= "000";
 				ledg <= "00000000";
 				next_state <= LOAD_X;
+
 			WHEN LOAD_Y => 
 				INITX <= '1';
 				INITY <= '0';
@@ -78,6 +80,7 @@ BEGIN
 				
 				ledg <= "00000001";
 				next_state <= LOAD_X;
+
 				
 			WHEN LOAD_X => 
 				INITX <= '0';
@@ -92,6 +95,7 @@ BEGIN
 				  initLoad <= '0';
 				ELSE
 				  initLoad <= '1';
+
 				END IF;
 				
 				ledg <= "00000010";
@@ -143,8 +147,7 @@ BEGIN
 				LOADX <= '0';
 				INITL <= '1';
 				DRAWL <= '0';
-				PLOT <= '0';
-					
+				PLOT <= '0';					
 				ledg <= "00001000";
 				colour <= sw(2 downto 0);
 				next_state <= DRAW_LINE;
@@ -156,8 +159,7 @@ BEGIN
 				LOADX <= '0';
 				INITL <= '0';
 				DRAWL <= '1';
-				PLOT <= '1';
-				
+				PLOT <= '1';				
 				ledg <= "00010000";
 				
 				IF (LDONE = '1') THEN
@@ -165,6 +167,7 @@ BEGIN
 					next_state <= DONE_LINE;
 				ELSE
 					next_state <= DRAW_LINE;
+
 				END IF;
 				
 				
@@ -189,6 +192,7 @@ BEGIN
 				DRAWL <= '0';
 				PLOT <= '0';
 				next_state <= DONE_LINE;
+
 		END CASE;
 	END PROCESS;
 		

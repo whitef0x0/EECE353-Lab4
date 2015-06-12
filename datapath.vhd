@@ -8,6 +8,7 @@ USE WORK.ALL;
 ENTITY datapath IS
 	PORT (
 		clock : IN STD_LOGIC;
+
 		resetb : IN STD_LOGIC;
 		RESETX, RESETY, incr_y, incr_x, initl, drawl : IN STD_LOGIC;
 		x : OUT STD_LOGIC_VECTOR(7 downto 0); -- x0
@@ -22,6 +23,7 @@ ARCHITECTURE mixed OF datapath IS
 BEGIN
 
 	PROCESS(clock, resetb)
+
 		VARIABLE x_tmp : unsigned(7 downto 0) := "00000000";
 		VARIABLE y_tmp : unsigned(6 downto 0) := "0000000";
 		
@@ -44,6 +46,7 @@ BEGIN
 			x1 := "01010000";	-- 80
 			y1 := "0111100";	-- 60
 		ELSIF rising_edge(clock) THEN
+
 		
 			--initialize line
 			IF (initl = '1') THEN
